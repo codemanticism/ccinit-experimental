@@ -1,4 +1,5 @@
 /*/number.c /types.c */
+
 enum Operation{
 	ADD,
 	SUBTRACT,
