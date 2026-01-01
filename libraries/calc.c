@@ -1,3 +1,4 @@
+/*/number /types */
 enum Operation{
 	ADD,
 	SUBTRACT,
