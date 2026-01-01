@@ -1,4 +1,4 @@
-/*/number /types */
+/*/number.c /types.c */
 enum Operation{
 	ADD,
 	SUBTRACT,
