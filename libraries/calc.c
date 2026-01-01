@@ -8,7 +8,7 @@ enum Operation{
 	UNDEFINED,
 };
 //Works, but it actually edits what it receives, so it must be editable, which can be made using the array.
-struct option_float process(char* arr, char** ptr, bool* changed_ptr){
+struct option_float process(char* arr, char** ptr, char* changed_ptr){
 	u32 layer = 0;
 	float result = 0;
 	*changed_ptr = false;
