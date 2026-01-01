@@ -11,7 +11,7 @@ enum Operation{
 struct option_float process(char* arr, char** ptr, char* changed_ptr){
 	u32 layer = 0;
 	float result = 0;
-	*changed_ptr = false;
+	*changed_ptr = 0;
 	enum Operation op = UNDEFINED;
 	for(u32 i = 0; arr[i] != '\0'; i++){
 		switch(arr[i]){
@@ -31,10 +31,10 @@ struct option_float process(char* arr, char** ptr, char* changed_ptr){
 				break;
 			case ')':
 				*ptr = &arr[i];
-				*changed_ptr = true;
+				*changed_ptr = 1;
 				break;												
 			case '(':
-				bool* changed_ptr;
+				char* changed_ptr;
 				char** to_write_to;
 				struct option_float opt = process_float(&arr[i], to_write_to, changed_ptr);
 				if(*changed_ptr){
